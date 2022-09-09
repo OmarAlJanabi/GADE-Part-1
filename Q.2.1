@@ -1,5 +1,8 @@
-namespace MyApp // Note: actual namespace depends on the project name.
+using System;
+
+namespace Part_1
 {
+   
     
     internal class Program
     {
@@ -8,7 +11,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             protected int x;
             protected int y;
-            public enum TIleType
+            public enum TileType
             {
                 Hero,
                 Enemy,
@@ -25,15 +28,31 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
         class Obstacle : Tile
-           
         {
-           
+            //constructor simply calls the base class’s constructor with X and Y parameters.
+            public Obstacle(int Tile) : base (Tile, Tile)
+            {
+                
+            }
+
         }
 
-        
+        class EmptyTile : Tile
+        {
+            //merely exists to denote an empty tile.
+            public EmptyTile(int Tile) : base (Tile, Tile)
+            {
+
+            }
+        }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
     }
 }
+
+  
+    
