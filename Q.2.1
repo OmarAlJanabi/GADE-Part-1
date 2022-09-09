@@ -1,0 +1,39 @@
+namespace MyApp // Note: actual namespace depends on the project name.
+{
+    
+    internal class Program
+    {
+        abstract class Tile
+        {
+
+            protected int x;
+            protected int y;
+            public enum TIleType
+            {
+                Hero,
+                Enemy,
+                Gold,
+                Weapon
+            }
+            // Constructor of abstract class
+            public Tile(int x, int y)
+            {
+
+
+                this.x = x;
+                this.y = y;
+            }
+        }
+        class Obstacle : Tile
+           
+        {
+           
+        }
+
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
